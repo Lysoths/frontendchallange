@@ -7,8 +7,11 @@ const RightSide = ({ name, setName, cardNumber, setCardNumber }) => {
 
   const cardNumberHandler = (e) => {
     const number = e.target.value.toString().replace(/\d{4}(?=.)/g, "$& ");
-    setCardNumber(number);
-    setCardNumber({ ...cardNumber, cardNumber: number });
+    if (/^[\d\s]+$/.test(number)) {
+      setCardNumber({ ...cardNumber, cardNumber: number });
+    } else {
+      return false;
+    }
   };
 
   const securHandler1 = (e) => {

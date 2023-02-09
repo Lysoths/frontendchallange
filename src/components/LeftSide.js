@@ -10,7 +10,7 @@ const LeftSide = ({ name, cardNumber, newCards }) => {
             <div className='little-circle'></div>
           </div>
           <div className='number-container'>
-            <p>{cardNumber.cardNumber}</p>
+            <p className='number'>{cardNumber.cardNumber}</p>
           </div>
           <div className='credit-card-info'>
             <p>{cardNumber.cardHolder && cardNumber.cardHolder}</p>
