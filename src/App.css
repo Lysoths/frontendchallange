@@ -1,38 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
   display: flex;
+  height: 100vh;
+}
+
+.Leftside {
+  width: 30%;
+  background-image: url(./images/bg-main-desktop.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
   flex-direction: column;
+}
+.left-side-container {
+  height: 500px;
+  position: relative;
+}
+.Rightside {
+  width: 70%;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+}
+
+.card-container {
+  height: fit-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+small {
+  font-weight: bold;
+}
+input {
+  width: 365px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.485);
+}
+
+input:focus {
+  border: 1px solid #4f13778c;
+}
+
+.card-name {
+  display: Flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.card-number {
+  margin: 10px 0;
+  display: Flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-secur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.secur {
+  margin-bottom: 5px;
+}
+.left input {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.right {
+  width: 55%;
+  display: Flex;
+  flex-direction: column;
+}
+
+.right input {
+  width: 200px;
+}
+
+.button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button button {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: #270b36;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.credit-card-container {
+  height: 80%;
+  position: relative;
+}
+
+.up {
+  height: 219px;
+  width: 400px;
+  background-image: url(./images/bg-card-front.png);
+  background-size: contain;
+  position: relative;
+  padding: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 10px;
+  right: -115px;
+}
+
+.circles {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: White;
+}
+
+.little-circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.number-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+}
+
+.number-container p {
+  margin-right: 10px;
+}
+
+.number-container p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 6px;
+}
+
+.credit-card-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.credit-card-info p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.down {
+  height: 219px;
+  width: 400px;
+  background-image: url(./images/bg-card-back.png);
+  background-size: contain;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  bottom: 10px;
+  right: -190px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.exp {
+  margin-right: 30px;
+  color: rgba(255, 255, 255, 0.685);
+}
+
+@media screen and (max-width: 1100px) {
+  .App {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Leftside {
+    width: 100%;
+    align-items: center;
+  }
+
+  .Rightside {
+    width: 100%;
+  }
+
+  .left-side-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .up {
+    right: -195px;
+    top: 305px;
+    z-index: 2;
+  }
+
+  .down {
+    top: 185px;
+    right: -295px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .App {
+    height: fit-content;
+  }
+  .Rightside {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .left-side-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Leftside {
+    height: fit-content;
+  }
+
+  .up {
+    top: 270px;
+    z-index: 2;
+  }
+
+  .down {
+    top: 142px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .up {
+    right: -195px;
+    top: 350px;
+    z-index: 2;
+  }
+
+  .down {
+    top: 222px;
+    right: -195px;
+    z-index: 1;
+  }
+
+  .Rightside {
+    width: 100%;
+    height: 500px;
   }
 }
