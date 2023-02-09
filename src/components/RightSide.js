@@ -36,6 +36,7 @@ const RightSide = ({ name, setName, cardNumber, setCardNumber }) => {
             id=''
             maxLength='30'
             onChange={nameHandler}
+            placeholder='e.g Josephine Dyner'
           />
         </div>
         <div className='card-number'>
@@ -46,6 +47,7 @@ const RightSide = ({ name, setName, cardNumber, setCardNumber }) => {
             id=''
             maxLength='16'
             onChange={cardNumberHandler}
+            placeholder='e.g 0000 0000 0000 0000'
           />
         </div>
         <div className='card-secur'>
@@ -58,6 +60,7 @@ const RightSide = ({ name, setName, cardNumber, setCardNumber }) => {
                 id=''
                 maxLength='2'
                 onChange={securHandler1}
+                placeholder='MM'
               />
               <input
                 type='text'
@@ -65,6 +68,7 @@ const RightSide = ({ name, setName, cardNumber, setCardNumber }) => {
                 id=''
                 maxLength='2'
                 onChange={securHandler2}
+                placeholder='YY'
               />
             </div>
           </div>
@@ -76,6 +80,7 @@ const RightSide = ({ name, setName, cardNumber, setCardNumber }) => {
               id=''
               maxLength='3'
               onChange={securHandler3}
+              placeholder='e.g 000'
             />
           </div>
         </div>
